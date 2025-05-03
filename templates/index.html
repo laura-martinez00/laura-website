@@ -5,20 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Laura Martínez Temiño</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
 </head>
 <body>
-  <!-- Header with LinkedIn -->
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
   <!-- Hero Section -->
-  <section id="hero" class="section hero">
+  <section id="hero" class="section hero" data-aos="fade-in">
     <h1 style="color: #005451;">Laura Martinez Temiño</h1>
     <p>Integrating Data Science, Social Research, and Policy Analysis for real-world impact.</p>
     <a href="{{ url_for('static', filename='files/LauraMartinezCV.pdf') }}" class="btn" download style="background-color: #005451; color: white;">Download CV</a>
   </section>
 
+
   <!-- About Me -->
-  <section id="about" class="section about">
+  <section id="about" class="section about" data-aos="fade-up">
     <h2>About Me</h2>
     <div class="about-content">
       <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Laura Martinez Temiño photo">
@@ -29,10 +38,10 @@
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="section experience">
+  <section id="experience" class="section experience" data-aos="fade-up">
     <h2>Professional Experience</h2>
     <div class="entry-list">
-      <div class="entry">
+      <div class="entry" data-aos="fade-up">
         <div class="entry-header">
           <img src="{{ url_for('static', filename='images/logos/embassy.png') }}" alt="Embassy logo" class="entry-logo">
           <h4>Scientific Diplomacy Collaborator – Embassy of Spain in Belgium</h4>
@@ -40,7 +49,7 @@
         <span>Nov 2024 – Present</span>
         <p>Supported cultural and scientific programmes, managed content on Spainculture.be, liaised with EU institutions, and ensured inclusivity and sustainability in science diplomacy.</p>
       </div>
-      <div class="entry">
+      <div class="entry" data-aos="fade-up">
         <div class="entry-header">
           <img src="{{ url_for('static', filename='images/logos/kantar.png') }}" alt="Kantar logo" class="entry-logo">
           <h4>Data Quality Executive – Kantar Worldpanel</h4>
@@ -48,7 +57,7 @@
         <span>Jul 2024 – Nov 2024</span>
         <p>Ensured data integrity through QA processes, collaborated on analysis reports, and improved internal data validation tools.</p>
       </div>
-      <div class="entry">
+      <div class="entry" data-aos="fade-up">
         <div class="entry-header">
           <img src="{{ url_for('static', filename='images/logos/afi.png') }}" alt="AFI logo" class="entry-logo">
           <h4>Public Finance Intern – AFI</h4>
@@ -56,7 +65,7 @@
         <span>Jun 2024 – Jul 2024</span>
         <p>Assisted with policy evaluations and frameworks, presented research insights, and provided technical tools for public sector policy design.</p>
       </div>
-      <div class="entry">
+      <div class="entry" data-aos="fade-up">
         <div class="entry-header">
           <img src="{{ url_for('static', filename='images/logos/tecopy.png') }}" alt="Tecopy logo" class="entry-logo">
           <h4>Admin Office Assistant – Tecopy</h4>
@@ -64,14 +73,14 @@
         <span>Mar 2023 – Jun 2023</span>
         <p>Translated documents, ensured regulatory compliance, and identified business opportunities.</p>
       </div>
-      <div class="entry">
+      <div class="entry" data-aos="fade-up">
         <div class="entry-header">
           <img src="{{ url_for('static', filename='images/logos/wains.png') }}" alt="Wains logo" class="entry-logo">
           <h4>Marketing Research Analyst – WAINS</h4>
         </div>
         <span>Feb 2022 – Jun 2022</span>
       </div>
-      <div class="entry">
+      <div class="entry" data-aos="fade-up">
         <div class="entry-header">
           <img src="{{ url_for('static', filename='images/logos/uc3m.png') }}" alt="UC3M logo" class="entry-logo">
           <h4>Administrative Assistant – UC3M International Office</h4>
@@ -83,7 +92,7 @@
   </section>
 
   <!-- Education -->
-  <section id="education" class="section education">
+  <section id="education" class="section education"data-aos="fade-up">
     <h2>Education & Training</h2>
     <div class="about-content">
       <img 
@@ -92,7 +101,7 @@
         style="float: right; width: 300px; margin: 0 0 20px 20px; border-radius: 0; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
     </div>
     <div class="entry-list">
-      <div class="entry">
+      <div class="entry" data-aos="fade-up">
         <div class="entry-header">
           <img src="{{ url_for('static', filename='images/logos/uc3m.png') }}" alt="UC3M logo" class="entry-logo">
           <h4>Master in Computational Social Sciences – UC3M</h4>
@@ -100,28 +109,28 @@
         <span>Sep 2023 – Jul 2024</span>
         <p>Focus: Web scraping, text mining, ML, data visualisation. Thesis: NLP on UK Parliament debates.</p>
       </div>
-      <div class="entry">
+      <div class="entry" data-aos="fade-up">
         <div class="entry-header">
           <img src="{{ url_for('static', filename='images/logos/uc3m.png') }}" alt="UC3M logo" class="entry-logo">
           <h4>Double BA in International Studies & Political Science – UC3M</h4>
         </div>
         <span>Sep 2018 – Oct 2023</span>
       </div>
-      <div class="entry">
+      <div class="entry" data-aos="fade-up">
         <div class="entry-header">
           <img src="{{ url_for('static', filename='images/logos/sheffield.png') }}" alt="Sheffield logo" class="entry-logo">
           <h4>Erasmus Semester – University of Sheffield (Economics)</h4>
         </div>
         <span>Sep 2022 – Feb 2023</span>
       </div>
-      <div class="entry">
+      <div class="entry" data-aos="fade-up">
         <div class="entry-header">
           <img src="{{ url_for('static', filename='images/logos/circulo.png') }}" alt="Círculo logo" class="entry-logo">
           <h4>Courses on Cultural Management & Journalism – Círculo de Bellas Artes</h4>
         </div>
         <span>Jul 2021</span>
       </div>
-      <div class="entry">
+      <div class="entry" data-aos="fade-up">
         <div class="entry-header">
           <img src="{{ url_for('static', filename='images/logos/jeanmonnet.png') }}" alt="Jean Monnet logo" class="entry-logo">
           <h4>Jean Monnet Program – UC3M</h4>
