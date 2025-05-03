@@ -183,6 +183,50 @@ h1, h2, h3, h4 {
   margin-bottom: 10px;
 }
 
+/* Experience & Education (LinkedIn style) */
+.entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.entry {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1.5rem;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.entry-header h4 {
+  font-size: 1.2em;
+  margin: 0;
+  color: #005451;
+}
+
+.entry-header img {
+  height: 40px;
+  width: auto;
+  max-width: 120px;
+}
+
+.entry span {
+  display: block;
+  font-size: 0.9em;
+  color: #777;
+  margin: 0.3rem 0 0.6rem;
+}
+
+.entry p {
+  margin: 0;
+}
+
 /* Contact */
 form {
   max-width: 500px;
