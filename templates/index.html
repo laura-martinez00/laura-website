@@ -17,83 +17,179 @@
   </section>
 
   <!-- About Me -->
-  <section id="about" class="section about">
-    <h2>My Story</h2>
-    <p>I am passionate about applying data-driven research to social and policy challenges. My background combines computational tools, social science, and a global perspective.</p>
-  </section>
+ <section id="about" class="section about">
+  <h2>About Me</h2>
+  <div class="about-content">
+    <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Laura Martinez Temiño photo">
+    <p>
+      Multidisciplinary professional with a background in social sciences, policy, and data analysis. Passionate about bridging research, technology, and real-world impact through innovative, inclusive, and sustainable approaches.
+    </p>
+  </div>
+</section>
 
   <!-- Projects -->
   <section id="projects" class="section projects">
-    <h2>Projects</h2>
-    <div class="card-container">
-      <div class="card">
-        <div class="icon"><i class="fas fa-chart-bar"></i></div>
-        <h3>Parliament NLP</h3>
-        <p>Analyzing political discourse using Natural Language Processing on parliamentary debates.</p>
-      </div>
-      <div class="card">
-        <div class="icon"><i class="fas fa-spider"></i></div>
-        <h3>Web Scraping</h3>
-        <p>Automated data extraction from public websites using Python and Selenium.</p>
-      </div>
-      <div class="card">
-        <div class="icon"><i class="fas fa-project-diagram"></i></div>
-        <h3>Social Networks</h3>
-        <p>Visualizing online contagion and network interactions on Twitter using R and igraph.</p>
-      </div>
+  <h2>Projects</h2>
+  <div class="card-container">
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-landmark"></i></div>
+      <h3>NLP analysis of House of Commons Brexit Debates</h3>
+      <p>Master's thesis applying NLP to UK House of Commons debates (2013–2019): sentiment analysis, topic modeling, and hate speech detection.</p>
+      <a href="https://github.com/laura-martinez00/NLP_HouseOfCommons_debates" target="_blank">GitHub Repo</a> |
+      <a href="{{ url_for('static', filename='files/TFM-NLP on HoC debates.pdf') }}" target="_blank">PDF</a>
     </div>
-  </section>
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+      <h3>Science Calendar 2025</h3>
+      <p>Created a public calendar of Spanish science events in Belgium for the Embassy of Spain.</p>
+      <a href="https://github.com/laura-martinez00/Spain-science-calendar-2025" target="_blank">GitHub</a> |
+      <a href="https://www.spainculture.be/es/quienes-somos/la-ciencia-espanola-en-belgica-programa-2025/" target="_blank">Published Website</a>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-people-arrows"></i></div>
+      <h3>Network Analysis</h3>
+      <p>Explored Twitter networks and political diffusion using igraph and Gephi.</p>
+      <a href="https://github.com/laura-martinez00/SNA-assignment" target="_blank">GitHub Repo</a>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
+      <h3>Interactive Venue Recommender</h3>
+      <p>Scraped Forvenues site and deployed a Shiny dashboard for personalized nightlife recommendations.</p>
+      <a href="https://github.com/laura-martinez00/Data-harvesting-Project" target="_blank">GitHub Repo</a>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-magic"></i></div>
+      <h3>Sentiment Analysis – Harry Potter</h3>
+      <p>Applied NLP sentiment tools to analyze emotional arcs across Harry Potter novels.</p>
+      <a href="https://github.com/laura-martinez00/Sentiment-Analysis-Harry-Potter-books" target="_blank">GitHub Repo</a>
+    </div>
+
+  </div>
+</section>
 
   <!-- Tech Skills -->
   <section id="skills" class="section skills">
-    <h2>Technical Skills</h2>
-    <div class="card-container">
-      <div class="card">
-        <h4>Programming</h4>
-        <div class="skill-tags">
-          <span>R</span><span>Python</span><span>Flask</span><span>SQL</span>
-        </div>
-      </div>
-      <div class="card">
-        <h4>Data Analysis & Viz</h4>
-        <div class="skill-tags">
-          <span>Pandas</span><span>ggplot2</span><span>Seaborn</span><span>Shiny</span>
-        </div>
-      </div>
-      <div class="card">
-        <h4>Tools</h4>
-        <div class="skill-tags">
-          <span>Git</span><span>STATA</span><span>HTML/CSS</span><span>Tableau</span>
-        </div>
+  <h2>Technical Skills</h2>
+  <div class="card-container">
+    <div class="card">
+      <h4>Programming & Data</h4>
+      <div class="skill-tags">
+        <span>Python</span><span>R</span><span>Shiny</span><span>Flask</span><span>SQL</span>
       </div>
     </div>
-  </section>
+    <div class="card">
+      <h4>Data Science & Analysis</h4>
+      <div class="skill-tags">
+        <span>Pandas</span><span>Scikit-learn</span><span>Text Mining</span><span>Topic Modeling</span><span>Network Analysis</span>
+      </div>
+    </div>
+    <div class="card">
+      <h4>Visualization</h4>
+      <div class="skill-tags">
+        <span>ggplot2</span><span>Seaborn</span><span>Plotly</span><span>D3.js</span><span>Gephi</span>
+      </div>
+    </div>
+    <div class="card">
+      <h4>Web & Tools</h4>
+      <div class="skill-tags">
+        <span>HTML/CSS</span><span>Git</span><span>Jupyter</span><span>LaTeX</span><span>MS Office</span>
+      </div>
+    </div>
+    <div class="card">
+      <h4>Languages</h4>
+      <div class="skill-tags">
+        <span>Spanish (Native)</span><span>English (Fluent)</span><span>French (Intermediate)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- Experience / Education -->
   <section id="experience" class="section experience">
-    <h2>Experience & Education</h2>
-    <div class="timeline">
-      <div class="timeline-line"></div>
-      <div class="timeline-block">
-        <div class="dot"></div>
-        <h4>Scientific Diplomacy Collaborator - Spanish Embassy</h4>
-        <span>2024 – Present</span>
-        <p>Contributed to international science policy communication and research diplomacy.</p>
-      </div>
-      <div class="timeline-block">
-        <div class="dot"></div>
-        <h4>MSc in Computational Social Science - University of Cologne</h4>
-        <span>2023 – Present</span>
-        <p>Focus on data science, computational research methods, and policy applications.</p>
-      </div>
-      <div class="timeline-block">
-        <div class="dot"></div>
-        <h4>EU Project Officer - Fundación Carolina</h4>
-        <span>2022 – 2023</span>
-        <p>Supported international cooperation programs in research and education.</p>
-      </div>
+  <h2>Experience & Education</h2>
+  <div class="timeline">
+    <div class="timeline-line"></div>
+
+    <div class="timeline-block">
+      <div class="dot"></div>
+      <h4>Scientific Diplomacy Collaborator – Embassy of Spain in Belgium</h4>
+      <span>Nov 2024 – Present</span>
+      <p>Supported cultural and scientific programmes, managed content on Spainculture.be, liaised with EU institutions, and ensured inclusivity and sustainability in science diplomacy.</p>
     </div>
-  </section>
+
+    <div class="timeline-block">
+      <div class="dot"></div>
+      <h4>Data Quality Executive – Kantar Worldpanel</h4>
+      <span>Jul 2024 – Nov 2024</span>
+      <p>Ensured data integrity through QA processes, collaborated on analysis reports, and improved internal data validation tools.</p>
+    </div>
+
+    <div class="timeline-block">
+      <div class="dot"></div>
+      <h4>Public Finance Intern – AFI</h4>
+      <span>Jun 2024 – Jul 2024</span>
+      <p>Assisted with policy evaluations and frameworks, presented research insights, and provided technical tools for public sector policy design.</p>
+    </div>
+
+    <div class="timeline-block">
+      <div class="dot"></div>
+      <h4>Admin Office Assistant – Tecopy</h4>
+      <span>Mar 2023 – Jun 2023</span>
+      <p>Translated documents, ensured regulatory compliance, and identified business opportunities.</p>
+    </div>
+
+    <div class="timeline-block">
+      <div class="dot"></div>
+      <h4>Marketing Research Analyst – WAINS</h4>
+      <span>Feb 2022 – Jun 2022</span>
+    </div>
+
+    <div class="timeline-block">
+      <div class="dot"></div>
+      <h4>Administrative Assistant – UC3M International Office</h4>
+      <span>Sep 2019 – Jan 2020</span>
+      <p>Managed Erasmus data, curated EU academic materials, and supported intercultural initiatives.</p>
+    </div>
+
+    <div class="timeline-block">
+      <div class="dot"></div>
+      <h4>Master in Computational Social Sciences – UC3M</h4>
+      <span>Sep 2023 – Jul 2024</span>
+      <p>Focus: Web scraping, text mining, ML, data visualization. Thesis: NLP on UK Parliament debates.</p>
+    </div>
+
+    <div class="timeline-block">
+      <div class="dot"></div>
+      <h4>BA in International Studies & Political Science – UC3M</h4>
+      <span>Sep 2018 – Oct 2023</span>
+    </div>
+
+    <div class="timeline-block">
+      <div class="dot"></div>
+      <h4>Erasmus Semester – University of Sheffield (Economics)</h4>
+      <span>Sep 2022 – Feb 2023</span>
+    </div>
+
+    <div class="timeline-block">
+      <div class="dot"></div>
+      <h4>Courses on Cultural Management & Journalism – Círculo de Bellas Artes</h4>
+      <span>Jul 2021</span>
+    </div>
+
+    <div class="timeline-block">
+      <div class="dot"></div>
+      <h4>Jean Monnet Program – UC3M</h4>
+      <span>Sep 2018 – Jan 2019</span>
+    </div>
+
+  </div>
+</section>
 
   <!-- Contact -->
   <section id="contact" class="section contact">
@@ -111,4 +207,5 @@
   </section>
 </body>
 </html>
+
 

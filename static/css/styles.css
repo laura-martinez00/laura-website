@@ -1,4 +1,6 @@
 /* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +8,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Libre Baskerville', serif;
   background: #f9fbfd;
   color: #2c3e50;
   line-height: 1.6;
@@ -21,13 +23,13 @@ body {
 
 h1, h2, h3, h4 {
   margin-bottom: 20px;
-  color: #004e7c;
+  color: #008c88;
 }
 
 /* Hero */
 #hero {
   text-align: center;
-  background: linear-gradient(135deg, #b2fefa, #0ed2f7);
+  background: linear-gradient(135deg, #00a49a, #00a1a4);
   color: white;
   padding: 100px 20px;
   border-radius: 12px;
@@ -46,7 +48,7 @@ h1, h2, h3, h4 {
 .btn {
   display: inline-block;
   padding: 12px 24px;
-  background: #004e7c;
+  background: #008c88;
   color: white;
   text-decoration: none;
   border-radius: 30px;
@@ -54,14 +56,32 @@ h1, h2, h3, h4 {
 }
 
 .btn:hover {
-  background: #0077aa;
+  background: #006f6c;
 }
 
 /* About */
-.about p {
+.about {
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-content img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.about-content p {
   font-size: 1.1em;
   max-width: 800px;
-  margin: auto;
 }
 
 /* Projects */
@@ -88,6 +108,7 @@ h1, h2, h3, h4 {
 .card .icon {
   font-size: 2em;
   margin-bottom: 10px;
+  color: #00a49a;
 }
 
 /* Skills */
@@ -97,7 +118,7 @@ h1, h2, h3, h4 {
 
 .skill-category h4 {
   margin-bottom: 10px;
-  color: #006b99;
+  color: #00a1a4;
 }
 
 .skill-tags {
@@ -107,8 +128,8 @@ h1, h2, h3, h4 {
 }
 
 .skill-tags span {
-  background: #e0f0fa;
-  color: #004e7c;
+  background: #e0f8f7;
+  color: #008c88;
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 0.95em;
@@ -132,7 +153,7 @@ h1, h2, h3, h4 {
   top: 0;
   bottom: 0;
   width: 4px;
-  background-color: #004e7c;
+  background-color: #008c88;
 }
 
 .timeline-block {
@@ -147,7 +168,7 @@ h1, h2, h3, h4 {
   top: 6px;
   width: 12px;
   height: 12px;
-  background-color: #004e7c;
+  background-color: #008c88;
   border-radius: 50%;
 }
 
@@ -179,7 +200,7 @@ input, textarea {
 }
 
 button {
-  background: #28a745;
+  background: #00a1a4;
   color: white;
   padding: 12px;
   font-size: 1em;
@@ -190,7 +211,7 @@ button {
 }
 
 button:hover {
-  background: #218838;
+  background: #008c88;
 }
 
 .social-links {
@@ -200,7 +221,7 @@ button:hover {
 
 .social-links a {
   margin: 0 10px;
-  color: #004e7c;
+  color: #008c88;
   text-decoration: none;
   font-weight: bold;
 }
@@ -219,5 +240,3 @@ button:hover {
   opacity: 1;
   transform: translateY(0);
 }
-
-
