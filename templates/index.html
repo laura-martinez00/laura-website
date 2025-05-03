@@ -10,10 +10,16 @@
 </head>
 <body>
   <!-- Hero Section -->
+<header style="padding: 15px; text-align: right;">
+  <a href="https://www.linkedin.com/in/lauramartineztemino/" target="_blank">
+    <img src="{{ url_for('static', filename='images/linkedin.jpg') }}" alt="LinkedIn" style="height: 40px; width: auto;">
+  </a>
+</header>
+
   <section id="hero" class="section hero">
-    <h1>Hi, I'm Laura Martínez Temiño</h1>
+    <h1 style="color: #005451;">Hi, I'm Laura Martínez Temiño</h1>
     <p>Integrating Data Science, Social Research, and Policy Analysis for real-world impact.</p>
-    <a href="{{ url_for('static', filename='files/LauraMartinezCV.pdf') }}" class="btn" download>Download CV</a>
+    <a href="{{ url_for('static', filename='files/LauraMartinezCV.pdf') }}" class="btn" download style="background-color: #005451;">
   </section>
 
   <!-- About Me -->
