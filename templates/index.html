@@ -10,12 +10,6 @@
 </head>
 <body>
   <!-- Header with LinkedIn -->
-  <header style="padding: 15px; text-align: right;">
-    <a href="https://www.linkedin.com/in/lauramartineztemino/" target="_blank">
-      <img src="{{ url_for('static', filename='images/linkedin.jpg') }}" alt="LinkedIn" style="height: 40px; width: auto;">
-    </a>
-  </header>
-
   <!-- Hero Section -->
   <section id="hero" class="section hero">
     <h1 style="color: #005451;">Hi, I'm Laura Martínez Temiño</h1>
@@ -27,7 +21,7 @@
   <section id="about" class="section about">
     <h2>About Me</h2>
     <div class="about-content">
-      <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Laura Martinez Temiño photo" style="width: auto; max-width: 100%; height: auto; border-radius: 0;">
+      <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Laura Martinez Temiño photo">
       <p>
         Multidisciplinary professional with a background in social sciences, policy, and data analysis. Passionate about bridging research, technology, and real-world impact through innovative, inclusive, and sustainable approaches.
       </p>
@@ -35,7 +29,50 @@
   </section>
 
   <!-- Projects -->
-  <!-- (Leave unchanged as it looks correct) -->
+  <section id="projects" class="section projects">
+  <h2>Projects</h2>
+  <div class="card-container">
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-landmark"></i></div>
+      <h3>NLP Brexit Debates</h3>
+      <p>Master's thesis applying NLP to UK House of Commons debates (2013–2019): sentiment analysis, topic modelling, and hate speech detection.</p>
+      <a href="https://github.com/laura-martinez00/NLP_HouseOfCommons_debates" target="_blank">GitHub Repo</a> |
+      <a href="{{ url_for('static', filename='files/TFM-NLP on HoC debates.pdf') }}" target="_blank">PDF</a>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+      <h3>Science Calendar 2025</h3>
+      <p>Created a public calendar of Spanish science events in Belgium for the Embassy of Spain.</p>
+      <a href="https://github.com/laura-martinez00/Spain-science-calendar-2025" target="_blank">GitHub</a> |
+      <a href="https://www.spainculture.be/es/quienes-somos/la-ciencia-espanola-en-belgica-programa-2025/" target="_blank">Published Website</a>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-people-arrows"></i></div>
+      <h3>Network Analysis</h3>
+      <p>Explored Twitter networks and political diffusion using igraph and Gephi.</p>
+      <a href="https://github.com/laura-martinez00/SNA-assignment" target="_blank">GitHub Repo</a>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
+      <h3>Interactive Venue Recommender</h3>
+      <p>Scraped Forvenues site and deployed a Shiny dashboard for personalised nightlife recommendations.</p>
+      <a href="https://github.com/laura-martinez00/Data-harvesting-Project" target="_blank">GitHub Repo</a>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-magic"></i></div>
+      <h3>Sentiment Analysis – Harry Potter</h3>
+      <p>Applied NLP sentiment tools to analyse emotional arcs across Harry Potter novels.</p>
+      <a href="https://github.com/laura-martinez00/Sentiment-Analysis-Harry-Potter-books" target="_blank">GitHub Repo</a>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- Tech Skills (with STATA and Selenium added) -->
   <section id="skills" class="section skills">
@@ -50,11 +87,11 @@
       <div class="card">
         <h4>Data Science & Analysis</h4>
         <div class="skill-tags">
-          <span>Pandas</span><span>Scikit-learn</span><span>Text Mining</span><span>Topic Modeling</span><span>Network Analysis</span>
+          <span>Pandas</span><span>Scikit-learn</span><span>Text Mining</span><span>Topic Modelling</span><span>Network Analysis</span>
         </div>
       </div>
       <div class="card">
-        <h4>Visualization</h4>
+        <h4>Visualisation</h4>
         <div class="skill-tags">
           <span>ggplot2</span><span>Seaborn</span><span>Plotly</span><span>D3.js</span><span>Gephi</span>
         </div>
@@ -127,7 +164,14 @@
 <section id="education" class="section education">
   <h2>Education & Training</h2>
   <div class="about-content">
-    <img src="{{ url_for('static', filename='images/uc3mgraduation.jpg') }}" alt="UC3M Graduation Photo" style="width: auto; max-width: 100%; height: auto; border-radius: 0;">
+    <img 
+      src="{{ url_for('static', filename='images/uc3mgraduation.jpg') }}" 
+      alt="UC3M Graduation Photo" 
+      style="float: right; 
+             width: 250px; 
+             margin: 0 0 20px 20px; 
+             border-radius: 0; 
+             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
   </div>
   <div class="timeline">
     <div class="timeline-line"></div>
@@ -136,7 +180,7 @@
       <div class="dot"></div>
       <h4>Master in Computational Social Sciences – UC3M</h4>
       <span>Sep 2023 – Jul 2024</span>
-      <p>Focus: Web scraping, text mining, ML, data visualization. Thesis: NLP on UK Parliament debates.</p>
+      <p>Focus: Web scraping, text mining, ML, data visualisation. Thesis: NLP on UK Parliament debates.</p>
     </div>
 
     <div class="timeline-block">
@@ -182,7 +226,6 @@
   </section>
 </body>
 </html>
-
 
 
 
