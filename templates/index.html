@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laura Martínez Temiño</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section id="hero" class="section hero">
+    <h1>Hi, I'm Laura Martínez Temiño</h1>
+    <p>Integrating Data Science, Social Research, and Policy Analysis for real-world impact.</p>
+    <a href="{{ url_for('static', filename='files/LauraMartinezCV.pdf') }}" class="btn" download>Download CV</a>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" class="section about">
+    <h2>My Story</h2>
+    <p>I am passionate about applying data-driven research to social and policy challenges. My background combines computational tools, social science, and a global perspective.</p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section projects">
+    <h2>Projects</h2>
+    <div class="card-container">
+      <div class="card">
+        <div class="icon"><i class="fas fa-chart-bar"></i></div>
+        <h3>Parliament NLP</h3>
+        <p>Analyzing political discourse using Natural Language Processing on parliamentary debates.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fas fa-spider"></i></div>
+        <h3>Web Scraping</h3>
+        <p>Automated data extraction from public websites using Python and Selenium.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fas fa-project-diagram"></i></div>
+        <h3>Social Networks</h3>
+        <p>Visualizing online contagion and network interactions on Twitter using R and igraph.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Skills -->
+  <section id="skills" class="section skills">
+    <h2>Technical Skills</h2>
+    <div class="card-container">
+      <div class="card">
+        <h4>Programming</h4>
+        <div class="skill-tags">
+          <span>R</span><span>Python</span><span>Flask</span><span>SQL</span>
+        </div>
+      </div>
+      <div class="card">
+        <h4>Data Analysis & Viz</h4>
+        <div class="skill-tags">
+          <span>Pandas</span><span>ggplot2</span><span>Seaborn</span><span>Shiny</span>
+        </div>
+      </div>
+      <div class="card">
+        <h4>Tools</h4>
+        <div class="skill-tags">
+          <span>Git</span><span>STATA</span><span>HTML/CSS</span><span>Tableau</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience / Education -->
+  <section id="experience" class="section experience">
+    <h2>Experience & Education</h2>
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-block">
+        <div class="dot"></div>
+        <h4>Scientific Diplomacy Collaborator - Spanish Embassy</h4>
+        <span>2024 – Present</span>
+        <p>Contributed to international science policy communication and research diplomacy.</p>
+      </div>
+      <div class="timeline-block">
+        <div class="dot"></div>
+        <h4>MSc in Computational Social Science - University of Cologne</h4>
+        <span>2023 – Present</span>
+        <p>Focus on data science, computational research methods, and policy applications.</p>
+      </div>
+      <div class="timeline-block">
+        <div class="dot"></div>
+        <h4>EU Project Officer - Fundación Carolina</h4>
+        <span>2022 – 2023</span>
+        <p>Supported international cooperation programs in research and education.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <h2>Contact</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="_replyto" placeholder="Your email" required />
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/lauramartineztemino" target="_blank">LinkedIn</a>
+      <a href="https://github.com/tuusuario" target="_blank">GitHub</a>
+    </div>
+  </section>
+</body>
+</html>
+
