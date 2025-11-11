@@ -41,6 +41,15 @@
   <section id="experience" class="section experience" data-aos="fade-up">
     <h2>Professional Experience</h2>
     <div class="entry-list">
+	<div class="entry" data-aos="fade-up">
+	  <div class="entry-header">
+	    <img src="{{ url_for('static', filename='images/logos/EC.png') }}"
+         alt="European Commission / Eurostat logo" class="entry-logo">
+	    <h4>Blue Book Trainee – European Commission, Eurostat (DG ESTAT), Unit G.6 – Trade in Services & Globalisation</h4>
+	  </div>
+	  <span>Oct 2025 – Present</span>
+	  <p>Built interactive Shiny dashboards and visualizations for intra-EU bilateral asymmetries (ITSS/FDI/FATS); created reproducible pipelines with the Eurostat API; and drafted concise dissemination notes so methods and caveats are clear to non-technical audiences.</p>
+	</div>
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
           <img src="{{ url_for('static', filename='images/logos/embassy.png') }}" alt="Embassy logo" class="entry-logo">
@@ -92,7 +101,7 @@
   </section>
 
   <!-- Education -->
-  <section id="education" class="section education"data-aos="fade-up">
+  <section id="education" class="section education" data-aos="fade-up">
     <h2>Education & Training</h2>
     <div class="about-content">
       <img 
@@ -185,6 +194,21 @@
       <p>Applied NLP sentiment tools to analyse emotional arcs across Harry Potter novels.</p>
       <a href="https://github.com/laura-martinez00/Sentiment-Analysis-Harry-Potter-books" target="_blank">GitHub Repo</a>
     </div>
+
+<div class="card">
+  <img
+  src="{{ url_for('static', filename='images/projects/brexit-map-800.webp') }}"
+  srcset="{{ url_for('static', filename='images/projects/brexit-map-800.webp') }} 800w,
+          {{ url_for('static', filename='images/projects/brexit-map-1600.webp') }} 1600w"
+  sizes="(max-width: 700px) 100vw, 600px"
+  alt="Regional map of the UK showing Leave/Remain vote shares (project thumbnail)"
+  style="width:100%; height:auto; border-radius:8px; margin-bottom:12px;"
+  loading="lazy">
+  <h3>Brexit Referendum — Regional Vote Patterns</h3>
+  <p>Article and dataviz exploring regional dynamics of the 2016 UK EU referendum, with maps and small multiples.</p>
+  <a href="https://csslab.uc3m.es/dataviz/projects/2023/100408925/" target="_blank" rel="noopener">Read the article</a>
+</div>
+
 
   </div>
 </section>
