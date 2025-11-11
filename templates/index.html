@@ -12,19 +12,15 @@
 </head>
 <body>
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
+    AOS.init({ duration: 1000, once: true });
   </script>
 
   <!-- Hero Section -->
   <section id="hero" class="section hero" data-aos="fade-in">
-    <h1 style="color: #005451;">Laura Martinez Temiño</h1>
+    <h1 style="color: #005451;">Laura Martínez Temiño</h1>
     <p>Integrating Data Science, Social Research, and Policy Analysis for real-world impact.</p>
     <a href="{{ url_for('static', filename='files/LauraMartinezCV.pdf') }}" class="btn" download style="background-color: #005451; color: white;">Download CV</a>
   </section>
-
 
   <!-- About Me -->
   <section id="about" class="section about" data-aos="fade-up">
@@ -41,15 +37,18 @@
   <section id="experience" class="section experience" data-aos="fade-up">
     <h2>Professional Experience</h2>
     <div class="entry-list">
-	<div class="entry" data-aos="fade-up">
-	  <div class="entry-header">
-	    <img src="{{ url_for('static', filename='images/logos/EC.png') }}"
-         alt="European Commission / Eurostat logo" class="entry-logo">
-	    <h4>Blue Book Trainee – European Commission, Eurostat (DG ESTAT), Unit G.6 – Trade in Services & Globalisation</h4>
-	  </div>
-	  <span>Oct 2025 – Present</span>
-	  <p>Built interactive Shiny dashboards and visualizations for intra-EU bilateral asymmetries (ITSS/FDI/FATS); created reproducible pipelines with the Eurostat API; and drafted concise dissemination notes so methods and caveats are clear to non-technical audiences.</p>
-	</div>
+
+      <!-- Eurostat — Blue Book Traineeship -->
+      <div class="entry" data-aos="fade-up">
+        <div class="entry-header">
+          <img src="{{ url_for('static', filename='images/logos/EC.png') }}" alt="European Commission / Eurostat logo" class="entry-logo">
+          <h4>Blue Book Trainee – European Commission, Eurostat (DG ESTAT), Unit G.6 – Trade in Services & Globalisation</h4>
+        </div>
+        <span>Oct 2025 – Present</span>
+        <p>Built interactive Shiny dashboards and visualizations for intra-EU bilateral asymmetries (ITSS/FDI/FATS); created reproducible pipelines with the Eurostat API; and drafted concise dissemination notes so methods and caveats are clear to non-technical audiences.</p>
+      </div>
+
+      <!-- Embassy of Spain in Belgium -->
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
           <img src="{{ url_for('static', filename='images/logos/embassy.png') }}" alt="Embassy logo" class="entry-logo">
@@ -58,6 +57,7 @@
         <span>Nov 2024 – Sep 2025</span>
         <p>Supported cultural and scientific programmes, managed content on Spainculture.be, liaised with EU institutions, and ensured inclusivity and sustainability in science diplomacy.</p>
       </div>
+
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
           <img src="{{ url_for('static', filename='images/logos/kantar.png') }}" alt="Kantar logo" class="entry-logo">
@@ -66,6 +66,7 @@
         <span>Jul 2024 – Nov 2024</span>
         <p>Ensured data integrity through QA processes, collaborated on analysis reports, and improved internal data validation tools.</p>
       </div>
+
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
           <img src="{{ url_for('static', filename='images/logos/afi.png') }}" alt="AFI logo" class="entry-logo">
@@ -74,6 +75,7 @@
         <span>Jun 2024 – Jul 2024</span>
         <p>Assisted with policy evaluations and frameworks, presented research insights, and provided technical tools for public sector policy design.</p>
       </div>
+
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
           <img src="{{ url_for('static', filename='images/logos/tecopy.png') }}" alt="Tecopy logo" class="entry-logo">
@@ -82,6 +84,7 @@
         <span>Mar 2023 – Jun 2023</span>
         <p>Translated documents, ensured regulatory compliance, and identified business opportunities.</p>
       </div>
+
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
           <img src="{{ url_for('static', filename='images/logos/wains.png') }}" alt="Wains logo" class="entry-logo">
@@ -89,6 +92,7 @@
         </div>
         <span>Feb 2022 – Jun 2022</span>
       </div>
+
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
           <img src="{{ url_for('static', filename='images/logos/uc3m.png') }}" alt="UC3M logo" class="entry-logo">
@@ -97,6 +101,7 @@
         <span>Sep 2019 – Jan 2020</span>
         <p>Managed Erasmus data, curated EU academic materials, and supported intercultural initiatives.</p>
       </div>
+
     </div>
   </section>
 
@@ -148,70 +153,67 @@
       </div>
     </div>
   </section>
-</body>
-</html>
-
-
 
   <!-- Projects -->
   <section id="projects" class="section projects">
-  <h2>Projects</h2>
-  <div class="card-container">
+    <h2>Projects</h2>
+    <div class="card-container">
 
-    <div class="card">
-      <div class="icon"><i class="fas fa-landmark"></i></div>
-      <h3>NLP Brexit Debates</h3>
-      <p>Master's thesis applying NLP to UK House of Commons debates (2013–2019): sentiment analysis, topic modelling, and hate speech detection.</p>
-      <a href="https://github.com/laura-martinez00/NLP_HouseOfCommons_debates" target="_blank">GitHub Repo</a> |
-      <a href="{{ url_for('static', filename='files/TFM-NLP on HoC debates.pdf') }}" target="_blank">PDF</a>
+      <div class="card">
+        <div class="icon"><i class="fas fa-landmark"></i></div>
+        <h3>NLP Brexit Debates</h3>
+        <p>Master's thesis applying NLP to UK House of Commons debates (2013–2019): sentiment analysis, topic modelling, and hate speech detection.</p>
+        <a href="https://github.com/laura-martinez00/NLP_HouseOfCommons_debates" target="_blank">GitHub Repo</a> |
+        <a href="{{ url_for('static', filename='files/TFM-NLP on HoC debates.pdf') }}" target="_blank">PDF</a>
+      </div>
+
+      <div class="card">
+        <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+        <h3>Science Calendar 2025</h3>
+        <p>Created a public calendar of Spanish science events in Belgium for the Embassy of Spain.</p>
+        <a href="https://github.com/laura-martinez00/Spain-science-calendar-2025" target="_blank">GitHub</a> |
+        <a href="https://www.spainculture.be/es/quienes-somos/la-ciencia-espanola-en-belgica-programa-2025/" target="_blank">Published Website</a>
+      </div>
+
+      <div class="card">
+        <div class="icon"><i class="fas fa-people-arrows"></i></div>
+        <h3>Network Analysis</h3>
+        <p>Explored Twitter networks and political diffusion using igraph and Gephi.</p>
+        <a href="https://github.com/laura-martinez00/SNA-assignment" target="_blank">GitHub Repo</a>
+      </div>
+
+      <div class="card">
+        <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
+        <h3>Interactive Venue Recommender</h3>
+        <p>Scraped Forvenues site and deployed a Shiny dashboard for personalised nightlife recommendations.</p>
+        <a href="https://github.com/laura-martinez00/Data-harvesting-Project" target="_blank">GitHub Repo</a>
+      </div>
+
+      <div class="card">
+        <div class="icon"><i class="fas fa-magic"></i></div>
+        <h3>Sentiment Analysis – Harry Potter</h3>
+        <p>Applied NLP sentiment tools to analyse emotional arcs across Harry Potter novels.</p>
+        <a href="https://github.com/laura-martinez00/Sentiment-Analysis-Harry-Potter-books" target="_blank">GitHub Repo</a>
+      </div>
+
+      <div class="card">
+        <picture>
+          <source srcset="{{ url_for('static', filename='images/projects/brexit-map.webp') }}" type="image/webp">
+          <img
+            src="{{ url_for('static', filename='images/projects/brexit-map.jpg') }}"
+            alt="Regional map of the UK showing Leave/Remain vote shares (project thumbnail)"
+            style="width:100%; height:auto; border-radius:8px; margin-bottom:12px;"
+            loading="lazy">
+        </picture>
+        <h3>Brexit Referendum — Regional Vote Patterns</h3>
+        <p>Article and dataviz exploring regional dynamics of the 2016 UK EU referendum, with maps and small multiples.</p>
+        <a href="https://csslab.uc3m.es/dataviz/projects/2023/100408925/" target="_blank" rel="noopener">Read the article</a>
+      </div>
+
     </div>
+  </section>
 
-    <div class="card">
-      <div class="icon"><i class="fas fa-calendar-alt"></i></div>
-      <h3>Science Calendar 2025</h3>
-      <p>Created a public calendar of Spanish science events in Belgium for the Embassy of Spain.</p>
-      <a href="https://github.com/laura-martinez00/Spain-science-calendar-2025" target="_blank">GitHub</a> |
-      <a href="https://www.spainculture.be/es/quienes-somos/la-ciencia-espanola-en-belgica-programa-2025/" target="_blank">Published Website</a>
-    </div>
-
-    <div class="card">
-      <div class="icon"><i class="fas fa-people-arrows"></i></div>
-      <h3>Network Analysis</h3>
-      <p>Explored Twitter networks and political diffusion using igraph and Gephi.</p>
-      <a href="https://github.com/laura-martinez00/SNA-assignment" target="_blank">GitHub Repo</a>
-    </div>
-
-    <div class="card">
-      <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
-      <h3>Interactive Venue Recommender</h3>
-      <p>Scraped Forvenues site and deployed a Shiny dashboard for personalised nightlife recommendations.</p>
-      <a href="https://github.com/laura-martinez00/Data-harvesting-Project" target="_blank">GitHub Repo</a>
-    </div>
-
-    <div class="card">
-      <div class="icon"><i class="fas fa-magic"></i></div>
-      <h3>Sentiment Analysis – Harry Potter</h3>
-      <p>Applied NLP sentiment tools to analyse emotional arcs across Harry Potter novels.</p>
-      <a href="https://github.com/laura-martinez00/Sentiment-Analysis-Harry-Potter-books" target="_blank">GitHub Repo</a>
-    </div>
-
-<div class="card">
-  <img
-  src="{{ url_for('static', filename='images/projects/brexit-map.jpg') }}"
-  alt="Regional map of the UK showing Leave/Remain vote shares (project thumbnail)"
-  style="width:100%; height:auto; border-radius:8px; margin-bottom:12px;"
-  loading="lazy">
-  <h3>Brexit Referendum — Regional Vote Patterns</h3>
-  <p>Article and dataviz exploring regional dynamics of the 2016 UK EU referendum, with maps and small multiples.</p>
-  <a href="https://csslab.uc3m.es/dataviz/projects/2023/100408925/" target="_blank" rel="noopener">Read the article</a>
-</div>
-
-
-  </div>
-</section>
-
-
-  <!-- Tech Skills (with STATA and Selenium added) -->
+  <!-- Tech Skills -->
   <section id="skills" class="section skills">
     <h2>Technical Skills</h2>
     <div class="card-container">
@@ -248,7 +250,6 @@
     </div>
   </section>
 
-
   <!-- Contact -->
   <section id="contact" class="section contact">
     <h2>Contact</h2>
@@ -260,11 +261,9 @@
     </form>
     <div class="social-links">
       <a href="https://www.linkedin.com/in/lauramartineztemino" target="_blank">LinkedIn</a>
-      <a href="https://github.com/tuusuario" target="_blank">GitHub</a>
+      <a href="https://github.com/laura-martinez00" target="_blank">GitHub</a>
     </div>
   </section>
+
 </body>
 </html>
-
-
-
