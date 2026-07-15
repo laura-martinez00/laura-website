@@ -4,6 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Laura Martínez Temiño</title>
+  <meta name="description" content="Laura Martínez Temiño — Policy Analyst and Data Scientist bridging EU policy, research, and data-driven analysis. Experience, projects, and CV.">
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Laura Martínez Temiño">
+  <meta property="og:description" content="Policy Analyst and Data Scientist bridging EU policy, research, and data-driven analysis.">
+  <meta property="og:image" content="https://laura-website-pi.vercel.app/static/images/profile.jpg">
+  <meta property="og:url" content="https://laura-website-pi.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -11,22 +25,41 @@
   <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <script>
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 1000, once: true, disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches });
   </script>
+
+  <!-- Sticky nav -->
+  <header class="site-nav">
+    <nav aria-label="Primary">
+      <a href="#hero" class="nav-logo">Laura Martínez Temiño</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
 
   <!-- Hero Section -->
   <section id="hero" class="section hero" data-aos="fade-in">
-    <h1 style="color: #005451;">Laura Martínez Temiño</h1>
+    <h1>Laura Martínez Temiño</h1>
     <p>Integrating Data Science, Social Research, and Policy Analysis for real-world impact.</p>
-    <a href="{{ url_for('static', filename='files/LauraMartinezCV.pdf') }}" class="btn" download style="background-color: #005451; color: white;">Download CV</a>
+    <a href="{{ url_for('static', filename='files/LauraMartinezCV.pdf') }}" class="btn" download>Download CV</a>
   </section>
 
   <!-- About Me -->
-  <section id="about" class="section about" data-aos="fade-up">
+  <section id="about" class="section about alt-bg" data-aos="fade-up">
     <h2>About Me</h2>
     <div class="about-content">
-      <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Laura Martinez Temiño photo">
+      <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Laura Martinez Temiño photo" width="200" height="200">
       <p>
         Multidisciplinary professional with a background in social sciences, policy, and data analysis. Passionate about bridging research, technology, and real-world impact through innovative, inclusive, and sustainable approaches.
       </p>
@@ -41,8 +74,8 @@
       <!-- European Commission — DG COMM -->
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
-          <img src="{{ url_for('static', filename='images/logos/EC.png') }}" alt="European Commission logo" class="entry-logo">
-          <h4>Research and Project Assistant – European Commission, DG COMM (Contractor)</h4>
+          <img src="{{ url_for('static', filename='images/logos/EC.png') }}" alt="European Commission logo" class="entry-logo" width="48" height="48">
+          <h3>Research and Project Assistant – European Commission, DG COMM (Contractor)</h3>
         </div>
         <span>Mar 2026 – Present</span>
         <p>Designing policy evaluations through the proposal and implementation of research methods; assisting in the creation and maintenance of dashboards and in the analysis and processing of data; and supporting the communication of the European Commission's priorities through evidence-based results.</p>
@@ -51,8 +84,8 @@
       <!-- Eurostat — Blue Book Traineeship -->
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
-          <img src="{{ url_for('static', filename='images/logos/EC.png') }}" alt="European Commission / Eurostat logo" class="entry-logo">
-          <h4>Blue Book Trainee – European Commission, Eurostat (DG ESTAT), Unit G.6 – Trade in Services & Globalisation</h4>
+          <img src="{{ url_for('static', filename='images/logos/EC.png') }}" alt="European Commission / Eurostat logo" class="entry-logo" width="48" height="48">
+          <h3>Blue Book Trainee – European Commission, Eurostat (DG ESTAT), Unit G.6 – Trade in Services & Globalisation</h3>
         </div>
         <span>Oct 2025 – Feb 2026</span>
         <p>Built interactive Shiny dashboards and visualizations for intra-EU bilateral asymmetries (ITSS/FDI/FATS); created reproducible pipelines with the Eurostat API; and drafted concise dissemination notes so methods and caveats are clear to non-technical audiences.</p>
@@ -61,8 +94,8 @@
       <!-- Embassy of Spain in Belgium -->
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
-          <img src="{{ url_for('static', filename='images/logos/embassy.png') }}" alt="Embassy logo" class="entry-logo">
-          <h4>Scientific Diplomacy Collaborator – Embassy of Spain in Belgium</h4>
+          <img src="{{ url_for('static', filename='images/logos/embassy.png') }}" alt="Embassy logo" class="entry-logo" width="48" height="48">
+          <h3>Scientific Diplomacy Collaborator – Embassy of Spain in Belgium</h3>
         </div>
         <span>Nov 2024 – Sep 2025</span>
         <p>Supported cultural and scientific programmes, managed content on Spainculture.be, liaised with EU institutions, and ensured inclusivity and sustainability in science diplomacy.</p>
@@ -70,8 +103,8 @@
 
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
-          <img src="{{ url_for('static', filename='images/logos/kantar.png') }}" alt="Kantar logo" class="entry-logo">
-          <h4>Data Quality Executive – Kantar Worldpanel</h4>
+          <img src="{{ url_for('static', filename='images/logos/kantar.png') }}" alt="Kantar logo" class="entry-logo" width="48" height="48">
+          <h3>Data Quality Executive – Kantar Worldpanel</h3>
         </div>
         <span>Jul 2024 – Nov 2024</span>
         <p>Ensured data integrity through QA processes, collaborated on analysis reports, and improved internal data validation tools.</p>
@@ -79,8 +112,8 @@
 
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
-          <img src="{{ url_for('static', filename='images/logos/afi.png') }}" alt="AFI logo" class="entry-logo">
-          <h4>Public Finance Intern – AFI</h4>
+          <img src="{{ url_for('static', filename='images/logos/afi.png') }}" alt="AFI logo" class="entry-logo" width="48" height="48">
+          <h3>Public Finance Intern – AFI</h3>
         </div>
         <span>Jun 2024 – Jul 2024</span>
         <p>Assisted with policy evaluations and frameworks, presented research insights, and provided technical tools for public sector policy design.</p>
@@ -88,8 +121,8 @@
 
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
-          <img src="{{ url_for('static', filename='images/logos/tecopy.png') }}" alt="Tecopy logo" class="entry-logo">
-          <h4>Admin Office Assistant – Tecopy</h4>
+          <img src="{{ url_for('static', filename='images/logos/tecopy.png') }}" alt="Tecopy logo" class="entry-logo" width="48" height="48">
+          <h3>Admin Office Assistant – Tecopy</h3>
         </div>
         <span>Mar 2023 – Jun 2023</span>
         <p>Translated documents, ensured regulatory compliance, and identified business opportunities.</p>
@@ -97,16 +130,16 @@
 
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
-          <img src="{{ url_for('static', filename='images/logos/wains.png') }}" alt="Wains logo" class="entry-logo">
-          <h4>Marketing Research Analyst – WAINS</h4>
+          <img src="{{ url_for('static', filename='images/logos/wains.png') }}" alt="Wains logo" class="entry-logo" width="48" height="48">
+          <h3>Marketing Research Analyst – WAINS</h3>
         </div>
         <span>Feb 2022 – Jun 2022</span>
       </div>
 
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
-          <img src="{{ url_for('static', filename='images/logos/uc3m.png') }}" alt="UC3M logo" class="entry-logo">
-          <h4>Administrative Assistant – UC3M International Office</h4>
+          <img src="{{ url_for('static', filename='images/logos/uc3m.png') }}" alt="UC3M logo" class="entry-logo" width="48" height="48">
+          <h3>Administrative Assistant – UC3M International Office</h3>
         </div>
         <span>Sep 2019 – Jan 2020</span>
         <p>Managed Erasmus data, curated EU academic materials, and supported intercultural initiatives.</p>
@@ -116,48 +149,49 @@
   </section>
 
   <!-- Education -->
-  <section id="education" class="section education" data-aos="fade-up">
+  <section id="education" class="section education alt-bg" data-aos="fade-up">
     <h2>Education & Training</h2>
     <div class="about-content">
       <img
         src="{{ url_for('static', filename='images/uc3mgraduation.jpg') }}"
         alt="UC3M Graduation Photo"
+        loading="lazy"
         style="float: right; width: 300px; margin: 0 0 20px 20px; border-radius: 0; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
     </div>
     <div class="entry-list">
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
-          <img src="{{ url_for('static', filename='images/logos/uc3m.png') }}" alt="UC3M logo" class="entry-logo">
-          <h4>Master in Computational Social Sciences – UC3M</h4>
+          <img src="{{ url_for('static', filename='images/logos/uc3m.png') }}" alt="UC3M logo" class="entry-logo" width="48" height="48">
+          <h3>Master in Computational Social Sciences – UC3M</h3>
         </div>
         <span>Sep 2023 – Jul 2024</span>
         <p>Focus: Web scraping, text mining, ML, data visualisation. Thesis: NLP on UK Parliament debates.</p>
       </div>
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
-          <img src="{{ url_for('static', filename='images/logos/uc3m.png') }}" alt="UC3M logo" class="entry-logo">
-          <h4>Double BA in International Studies & Political Science – UC3M</h4>
+          <img src="{{ url_for('static', filename='images/logos/uc3m.png') }}" alt="UC3M logo" class="entry-logo" width="48" height="48">
+          <h3>Double BA in International Studies & Political Science – UC3M</h3>
         </div>
         <span>Sep 2018 – Oct 2023</span>
       </div>
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
-          <img src="{{ url_for('static', filename='images/logos/sheffield.png') }}" alt="Sheffield logo" class="entry-logo">
-          <h4>Erasmus Semester – University of Sheffield (Economics)</h4>
+          <img src="{{ url_for('static', filename='images/logos/sheffield.png') }}" alt="Sheffield logo" class="entry-logo" width="48" height="48">
+          <h3>Erasmus Semester – University of Sheffield (Economics)</h3>
         </div>
         <span>Sep 2022 – Feb 2023</span>
       </div>
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
-          <img src="{{ url_for('static', filename='images/logos/circulo.png') }}" alt="Círculo logo" class="entry-logo">
-          <h4>Courses on Cultural Management & Journalism – Círculo de Bellas Artes</h4>
+          <img src="{{ url_for('static', filename='images/logos/circulo.png') }}" alt="Círculo logo" class="entry-logo" width="48" height="48">
+          <h3>Courses on Cultural Management & Journalism – Círculo de Bellas Artes</h3>
         </div>
         <span>Jul 2021</span>
       </div>
       <div class="entry" data-aos="fade-up">
         <div class="entry-header">
-          <img src="{{ url_for('static', filename='images/logos/jeanmonnet.png') }}" alt="Jean Monnet logo" class="entry-logo">
-          <h4>Jean Monnet Program – UC3M</h4>
+          <img src="{{ url_for('static', filename='images/logos/jeanmonnet.png') }}" alt="Jean Monnet logo" class="entry-logo" width="48" height="48">
+          <h3>Jean Monnet Program – UC3M</h3>
         </div>
         <span>Sep 2018 – Jan 2019</span>
       </div>
@@ -170,40 +204,40 @@
     <div class="card-container">
 
       <div class="card">
-        <div class="icon"><i class="fas fa-landmark"></i></div>
+        <div class="icon" aria-hidden="true"><i class="fas fa-landmark"></i></div>
         <h3>NLP Brexit Debates</h3>
         <p>Master's thesis applying NLP to UK House of Commons debates (2013–2019): sentiment analysis, topic modelling, and hate speech detection.</p>
-        <a href="https://github.com/laura-martinez00/NLP_HouseOfCommons_debates" target="_blank">GitHub Repo</a> |
-        <a href="{{ url_for('static', filename='files/TFM-NLP on HoC debates.pdf') }}" target="_blank">PDF</a>
+        <a href="https://github.com/laura-martinez00/NLP_HouseOfCommons_debates" target="_blank" rel="noopener">GitHub Repo</a> |
+        <a href="{{ url_for('static', filename='files/TFM-NLP on HoC debates.pdf') }}" target="_blank" rel="noopener">PDF</a>
       </div>
 
       <div class="card">
-        <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+        <div class="icon" aria-hidden="true"><i class="fas fa-calendar-alt"></i></div>
         <h3>Science Calendar 2025</h3>
         <p>Created a public calendar of Spanish science events in Belgium for the Embassy of Spain.</p>
-        <a href="https://github.com/laura-martinez00/Spain-science-calendar-2025" target="_blank">GitHub</a> |
-        <a href="https://www.spainculture.be/es/quienes-somos/la-ciencia-espanola-en-belgica-programa-2025/" target="_blank">Published Website</a>
+        <a href="https://github.com/laura-martinez00/Spain-science-calendar-2025" target="_blank" rel="noopener">GitHub</a> |
+        <a href="https://www.spainculture.be/es/quienes-somos/la-ciencia-espanola-en-belgica-programa-2025/" target="_blank" rel="noopener">Published Website</a>
       </div>
 
       <div class="card">
-        <div class="icon"><i class="fas fa-people-arrows"></i></div>
+        <div class="icon" aria-hidden="true"><i class="fas fa-people-arrows"></i></div>
         <h3>Network Analysis</h3>
         <p>Explored Twitter networks and political diffusion using igraph and Gephi.</p>
-        <a href="https://github.com/laura-martinez00/SNA-assignment" target="_blank">GitHub Repo</a>
+        <a href="https://github.com/laura-martinez00/SNA-assignment" target="_blank" rel="noopener">GitHub Repo</a>
       </div>
 
       <div class="card">
-        <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
+        <div class="icon" aria-hidden="true"><i class="fas fa-map-marked-alt"></i></div>
         <h3>Interactive Venue Recommender</h3>
         <p>Scraped Forvenues site and deployed a Shiny dashboard for personalised nightlife recommendations.</p>
-        <a href="https://github.com/laura-martinez00/Data-harvesting-Project" target="_blank">GitHub Repo</a>
+        <a href="https://github.com/laura-martinez00/Data-harvesting-Project" target="_blank" rel="noopener">GitHub Repo</a>
       </div>
 
       <div class="card">
-        <div class="icon"><i class="fas fa-magic"></i></div>
+        <div class="icon" aria-hidden="true"><i class="fas fa-magic"></i></div>
         <h3>Sentiment Analysis – Harry Potter</h3>
         <p>Applied NLP sentiment tools to analyse emotional arcs across Harry Potter novels.</p>
-        <a href="https://github.com/laura-martinez00/Sentiment-Analysis-Harry-Potter-books" target="_blank">GitHub Repo</a>
+        <a href="https://github.com/laura-martinez00/Sentiment-Analysis-Harry-Potter-books" target="_blank" rel="noopener">GitHub Repo</a>
       </div>
 
       <div class="card">
@@ -224,7 +258,7 @@
   </section>
 
   <!-- Tech Skills -->
-  <section id="skills" class="section skills">
+  <section id="skills" class="section skills alt-bg">
     <h2>Technical Skills</h2>
     <div class="card-container">
       <div class="card">
@@ -263,17 +297,34 @@
   <!-- Contact -->
   <section id="contact" class="section contact">
     <h2>Contact</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <input type="text" name="name" placeholder="Your name" required />
-      <input type="email" name="_replyto" placeholder="Your email" required />
-      <textarea name="message" placeholder="Your message" required></textarea>
+
+    <p id="contact-success" class="success-banner" role="status" hidden>Thanks — your message has been sent. I'll get back to you soon.</p>
+
+    <form action="https://formsubmit.co/lauramartineztemino@gmail.com" method="POST" id="contact-form">
+      <input type="hidden" name="_subject" value="New message from your website">
+      <input type="hidden" name="_next" value="https://laura-website-pi.vercel.app/?sent=true#contact">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <label class="sr-only" for="contact-name">Your name</label>
+      <input type="text" id="contact-name" name="name" placeholder="Your name…" autocomplete="name" required />
+
+      <label class="sr-only" for="contact-email">Your email</label>
+      <input type="email" id="contact-email" name="_replyto" placeholder="Your email…" autocomplete="email" required />
+
+      <label class="sr-only" for="contact-message">Your message</label>
+      <textarea id="contact-message" name="message" placeholder="Your message…" required></textarea>
+
       <button type="submit">Send Message</button>
     </form>
     <div class="social-links">
-      <a href="https://www.linkedin.com/in/lauramartineztemino" target="_blank">LinkedIn</a>
-      <a href="https://github.com/laura-martinez00" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/lauramartineztemino" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/laura-martinez00" target="_blank" rel="noopener">GitHub</a>
     </div>
   </section>
+
+  </main>
 
 </body>
 </html>
