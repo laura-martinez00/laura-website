@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://laura-website-pi.vercel.app/sitemap.xml
