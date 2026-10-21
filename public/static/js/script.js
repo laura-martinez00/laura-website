@@ -13,7 +13,7 @@
     var dark = isDark();
     if (themeBtn) themeBtn.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
     document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
-      m.setAttribute("content", dark ? "#0f1716" : "#f7f6f2");
+      m.setAttribute("content", dark ? "#0b1424" : "#f1f6fc");
       m.removeAttribute("media");
     });
   }
@@ -86,6 +86,86 @@
       });
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
     revealEls.forEach(function (el) { revealer.observe(el); });
+    // Stagger siblings that enter together (cards in a grid, timeline items)
+    document.querySelectorAll(".project-grid, .edu-grid, .skills-grid, .timeline").forEach(function (group) {
+      Array.prototype.forEach.call(group.querySelectorAll(":scope > .reveal"), function (el, i) {
+        el.style.setProperty("--delay", ((i % 3) * 0.09).toFixed(2) + "s");
+      });
+    });
+  }
+
+  if (!reduced) {
+    /* Scroll-driven effects: progress bar, hero parallax, timeline fill -- */
+    var progressBar = document.querySelector(".scroll-progress");
+    var parallaxEls = document.querySelectorAll("[data-speed]");
+    var timeline = document.querySelector(".timeline");
+    var ticking = false;
+    function onScroll() {
+      var y = window.scrollY;
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      if (progressBar) progressBar.style.setProperty("--progress", max > 0 ? (y / max).toFixed(4) : 0);
+      if (y < window.innerHeight * 1.2) {
+        parallaxEls.forEach(function (el) {
+          el.style.setProperty("--parallax", (y * parseFloat(el.dataset.speed)).toFixed(1) + "px");
+        });
+      }
+      if (timeline) {
+        var r = timeline.getBoundingClientRect();
+        var f = (window.innerHeight * 0.6 - r.top) / r.height;
+        timeline.style.setProperty("--fill", Math.max(0, Math.min(1, f)).toFixed(3));
+      }
+      ticking = false;
+    }
+    window.addEventListener("scroll", function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+    }, { passive: true });
+    onScroll();
+
+    /* Pointer-driven tilt and spotlight (mouse/trackpad only) -------------- */
+    if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      document.querySelectorAll("[data-tilt-soft], [data-tilt]").forEach(function (card) {
+        var strong = card.hasAttribute("data-tilt");
+        var amount = strong ? 8 : (card.classList.contains("featured") ? 2 : 4);
+        card.addEventListener("pointermove", function (e) {
+          var r = card.getBoundingClientRect();
+          var px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+          card.style.setProperty("--mx", (px * 100).toFixed(1) + "%");
+          card.style.setProperty("--my", (py * 100).toFixed(1) + "%");
+          if (strong) {
+            card.style.transform = "perspective(900px) rotateY(" + ((px - 0.5) * amount).toFixed(2) + "deg) rotateX(" + ((0.5 - py) * amount).toFixed(2) + "deg)";
+          } else {
+            card.style.setProperty("--ry", ((px - 0.5) * amount).toFixed(2) + "deg");
+            card.style.setProperty("--rx", ((0.5 - py) * amount).toFixed(2) + "deg");
+          }
+        });
+        card.addEventListener("pointerleave", function () {
+          card.style.removeProperty("--rx");
+          card.style.removeProperty("--ry");
+          if (strong) card.style.transform = "";
+        });
+      });
+    }
+
+    /* Count-up numbers ---------------------------------------------------- */
+    var counters = document.querySelectorAll("[data-count]");
+    if (counters.length && "IntersectionObserver" in window) {
+      var fmt = new Intl.NumberFormat("en-GB");
+      var countIO = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          countIO.unobserve(entry.target);
+          var el = entry.target, target = +el.dataset.count, start = null;
+          function step(ts) {
+            if (start === null) start = ts;
+            var t = Math.min(1, (ts - start) / 1400);
+            el.textContent = fmt.format(Math.round(target * (1 - Math.pow(1 - t, 3))));
+            if (t < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        });
+      }, { threshold: 0.6 });
+      counters.forEach(function (el) { countIO.observe(el); });
+    }
   }
 
   /* Contact form --------------------------------------------------------- */

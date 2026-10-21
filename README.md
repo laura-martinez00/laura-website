@@ -1,4 +1,4 @@
-# Laura Martínez Temiño — Portfolio
+# Laura Martínez Temiño: Portfolio
 
 Personal portfolio built with Flask and plain HTML/CSS/JS, deployed on Vercel.
 Live: https://laura-website-pi.vercel.app/
